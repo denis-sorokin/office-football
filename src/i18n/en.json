@@ -1,0 +1,74 @@
+{
+    "main": {
+        "termsOfUse": "Terms of Use.",
+        "welcome": "Welcome!",
+        "register": "Registration",
+        "footballTitle": "Football tournament"
+    },
+    "buttons": {
+        "football": {
+            "wantGame": "Participate on game",
+            "wantReferee": "To be referee",
+            "cancelGame": "Cancel application",
+            "players": "Show players",
+            "playersList": "Players list",
+            "writeTime": "Apply"
+        }
+    },
+    "football": {
+        "wantGame": "Registration for the game",
+        "wantReferee": "Registration for the referee",
+        "cancelApplication": "Cancel application",
+        "gamesList": "Games list",
+        "playersList": "Players list",
+        "cancelApp": "Cancel application",
+        "selectDate": "Date",
+        "plannedDate": "Planned date",
+        "winners": "Winners",
+        "timeAvailable": "Time available on {time}",
+        "timeDeny": "Time is unavailable",
+        "player": {
+            "games": "Games"
+        }
+    },
+    "auth": {
+        "agree": "I agree to",
+        "alreadyJoined": "Already joined?",
+        "createAccount": "Create account",
+        "createNewAccount": "Create account",
+        "email": "Email",
+        "login": "Login",
+        "logout": "Logout",
+        "password": "Password",
+        "signUp": "Sign Up"
+    },
+    "nav": {
+        "home": "Home",
+        "login": "Login",
+        "logout": "Logout",
+        "about": "About",
+        "signUp": "Sign-Up",
+        "football": "Football"
+    },
+     "serverMsg": {
+        "errors": {
+            "0": "Unknown error. Maybe server not response.",
+            "1": "Not found",
+            "2": "User not found",
+            "3": "Login or password incorrect",
+            "4": "User not found",
+            "5": "Session expired",
+            "6": "Unauthorized",
+            "7": "Cannot create user",
+            "8": "Wrong password!",
+            "9": "Cannot get user",
+            "10": "Not found football player",
+            "11": "Cannot get football players",
+            "12": "Cannot get football games",
+            "13": "You not have permission."
+        },
+         "notifications": {
+             "0": "Success!"
+         }
+    }
+}
