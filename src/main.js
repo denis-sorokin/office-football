@@ -5,6 +5,8 @@ import store from './store';
 import './registerServiceWorker';
 import './plugins/element.js';
 
+import '@/i18n';
+
 Vue.config.productionTip = false;
 
 new Vue({

@@ -1,7 +1,22 @@
 <template>
-	<div id="app" @click="hideSidebar">
-		<!--<navbar></navbar>-->
-		<router-view/>
+	<div id="app">
+		<el-container class="football">
+			<el-header>Header</el-header>
+			<el-container>
+				<el-aside width="200px">Aside</el-aside>
+				<el-container>
+					<el-main>
+						<router-view/>
+					</el-main>
+					<el-footer>Footer</el-footer>
+					<div class="bg-main bg-main__overlay">
+						<div class="bg-main__top"></div>
+						<div class="bg-main__body"></div>
+					</div>
+
+				</el-container>
+			</el-container>
+		</el-container>
 	</div>
 </template>
 
@@ -19,11 +34,11 @@ export default {
 		})
 	},
 	methods: {
-		hideSidebar (e) {
-			if (!(e.target.id === 'logoProfile') && !(e.target.id === 'menuProfile')) {
-				this.$store.dispatch('SET_SIDEBAR_STATUS', false);
-			}
-		}
+		// hideSidebar (e) {
+		// 	if (!(e.target.id === 'logoProfile') && !(e.target.id === 'menuProfile')) {
+		// 		this.$store.dispatch('SET_SIDEBAR_STATUS', false);
+		// 	}
+		// }
 	},
 	watch: {
 		'error': function (val) {

@@ -1,0 +1,61 @@
+@import "constants";
+
+body {
+	margin: 0;
+}
+
+#app {
+	height: 100vh;
+}
+
+.el-main {
+	min-height: $main-max-height;
+}
+
+.bg-main {
+	height: 100%;
+	z-index: -1;
+	position: absolute;
+	left: 0;
+	right: 0;
+	background-color: #ffffff;
+	&:before {
+		content: '';
+	}
+
+	&__overlay {
+		z-index: -2;
+		position: absolute;
+		background-color: rgba(255, 255, 255, 0.5);
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	&__top {
+		z-index: -3;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 35vh;
+		background: url('./assets/football_bg_top.jpg');
+		background-repeat: no-repeat;
+		background-size: auto;
+		background-position: center -130px;
+	}
+
+	&__body {
+		z-index: -4;
+		position: absolute;
+		//top: $football-bg-top-height + 25vh;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 65vh;
+		background: url('./assets/football_bg_body_opt.png');
+		background-size: cover;
+		background-position: center;
+	}
+}
