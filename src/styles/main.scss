@@ -26,6 +26,10 @@ body {
 	background-color: $white;
 }
 
+.el-menu-item {
+	font-size: 1.4em !important;
+}
+
 .bg-main {
 	height: 100%;
 	z-index: -1;
@@ -79,4 +83,12 @@ body {
 }
 .toggleSidebar-leave-active {
 	animation: slideOutLeft 0.5s linear;
+}
+
+.routerAnimate-enter-active {
+	animation: slideInRight 0.5s linear;
+}
+
+.routerAnimate-leave-active {
+	animation: slideInRight 0.5s linear;
 }

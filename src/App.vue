@@ -17,9 +17,13 @@
 				</transition>
 				<el-container>
 					<el-main>
-						<router-view/>
+						<transition name="routerAnimate">
+							<router-view/>
+						</transition>
 					</el-main>
-					<el-footer>Footer</el-footer>
+					<el-footer>
+						<el-col :span="24" class="h-100 vertical-center justify-center">Footer</el-col>
+					</el-footer>
 					<div class="bg-main">
 						<div class="bg-main__overlay"></div>
 						<div class="bg-main__top"></div>
@@ -50,7 +54,8 @@ export default {
 		// 	this.$store.dispatch('other/SET_SIDEBAR_STATUS', true);
 		// },
 		hideSidebar (e) {
-			console.log();
+			console.log(e.target.className);
+			console.log(e.target.className.indexOf('el-menu'));
 			if (e.target.id !== 'menu-content') {
 				if (e.target.id === 'menu-button' || e.target.parentElement.id === 'menu-button') {
 					if (this.sidebar === true) {
@@ -59,7 +64,10 @@ export default {
 						this.$store.dispatch('other/SET_SIDEBAR_STATUS', true);
 					}
 				}
-				if (e.target.id !== 'menu-button' && e.target.parentElement.id !== 'menu-button') {
+				if (e.target.id !== 'menu-button' &&
+					e.target.parentElement.id !== 'menu-button' &&
+					e.target.className.indexOf('menu') === -1 &&
+					e.target.parentElement.className.indexOf('menu') === -1) {
 					this.$store.dispatch('other/SET_SIDEBAR_STATUS', false);
 				}
 			}
