@@ -1,19 +1,30 @@
 <template>
-	<div id="app">
+	<div id="app" @click="hideSidebar">
 		<el-container class="football">
-			<el-header>Header</el-header>
+			<el-header>
+				<el-col :span="5" class="h-100 vertical-center">
+					<el-button id="menu-button" plain icon="el-icon-menu"></el-button>
+				</el-col>
+				<el-col :span="19" class="h-100 text-right">
+					<h1>{{ $t('main.footballTitle') }}</h1>
+				</el-col>
+			</el-header>
 			<el-container>
-				<el-aside width="200px">Aside</el-aside>
+				<transition name="toggleSidebar">
+					<el-aside class="tac" id="menu-content" v-show="sidebar">
+							<v-navbar></v-navbar>
+					</el-aside>
+				</transition>
 				<el-container>
 					<el-main>
 						<router-view/>
 					</el-main>
 					<el-footer>Footer</el-footer>
-					<div class="bg-main bg-main__overlay">
+					<div class="bg-main">
+						<div class="bg-main__overlay"></div>
 						<div class="bg-main__top"></div>
 						<div class="bg-main__body"></div>
 					</div>
-
 				</el-container>
 			</el-container>
 		</el-container>
@@ -21,24 +32,38 @@
 </template>
 
 <script>
-// import Navbar from './components/feature/Navbar';
+import VNavbar from '@/components/VNavbar';
 import { mapGetters } from 'vuex';
 
 export default {
 	name: 'Root',
-	// components: { Navbar },
+	components: { VNavbar },
 	computed: {
 		...mapGetters({
-			error: 'getError',
-			message: 'getMessage'
+			error: 'error/getError',
+			message: 'notification/getMessage',
+			sidebar: 'other/getSidebarStatus'
 		})
 	},
 	methods: {
-		// hideSidebar (e) {
-		// 	if (!(e.target.id === 'logoProfile') && !(e.target.id === 'menuProfile')) {
-		// 		this.$store.dispatch('SET_SIDEBAR_STATUS', false);
-		// 	}
-		// }
+		// openSidebar () {
+		// 	this.$store.dispatch('other/SET_SIDEBAR_STATUS', true);
+		// },
+		hideSidebar (e) {
+			console.log();
+			if (e.target.id !== 'menu-content') {
+				if (e.target.id === 'menu-button' || e.target.parentElement.id === 'menu-button') {
+					if (this.sidebar === true) {
+						this.$store.dispatch('other/SET_SIDEBAR_STATUS', false);
+					} else {
+						this.$store.dispatch('other/SET_SIDEBAR_STATUS', true);
+					}
+				}
+				if (e.target.id !== 'menu-button' && e.target.parentElement.id !== 'menu-button') {
+					this.$store.dispatch('other/SET_SIDEBAR_STATUS', false);
+				}
+			}
+		}
 	},
 	watch: {
 		'error': function (val) {

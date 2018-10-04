@@ -4,13 +4,19 @@ import VuexI18n from 'vuex-i18n';
 
 /* modules */
 import auth from './modules/auth';
+import notification from './modules/notification';
+import error from './modules/errors';
+import other from './modules/other';
 
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
 	strict: true, // process.env.NODE_ENV !== 'production',
 	modules: {
-		auth
+		auth,
+		notification,
+		error,
+		other
 	}
 });
 

@@ -12,7 +12,7 @@
 					<input type="password" id="password" v-model="password" required="required" class="border-25"/>
 				</div>
 			</div>
-			<button class="btn btn-primary btn-lg" @click="auth">{{ $t('auth.login') }}</button>
+			<!--<button class="btn btn-primary btn-lg" @click="auth">{{ $t('auth.login') }}</button>-->
 		</div>
 	</div>
 </template>

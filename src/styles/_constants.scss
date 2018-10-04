@@ -1,6 +1,60 @@
+$color-primary-0: #3D7D99;
+$color-primary-1: #627A85;
+$color-primary-2: #628A9B;
+$color-primary-3: #2882A9;
+$color-primary-4: #0991CD;
+
+$color-green-0: #41AE6D;
+$color-green-1: #6E977F;
+$color-green-2: #6DB188;
+$color-green-3: #26BE63;
+$color-green-4: #00D958;
+
+$color-orange-0: #F2AB5A;
+$color-orange-1: #D2B899;
+$color-orange-2: #F6C997;
+$color-orange-3: #FF9F33;
+$color-orange-4: #FF8700;
+
+$color-red-0: #F2785A;
+$color-red-1: #D2A499;
+$color-red-2: #F6A997;
+$color-red-3: #FF5A33;
+$color-red-4: #FF3100;
+
+// As RGBa codes */
+$rgba-primary-0: rgba( 65,174,109,1);
+$rgba-primary-1: rgba(110,151,127,1);
+$rgba-primary-2: rgba(109,177,136,1);
+$rgba-primary-3: rgba( 38,190, 99,1);
+$rgba-primary-4: rgba(  0,217, 88,1);
+
+$rgba-secondary-1-0: rgba( 61,125,153,1);
+$rgba-secondary-1-1: rgba( 98,122,133,1);
+$rgba-secondary-1-2: rgba( 98,138,155,1);
+$rgba-secondary-1-3: rgba( 40,130,169,1);
+$rgba-secondary-1-4: rgba(  9,145,205,1);
+
+$rgba-secondary-2-0: rgba(242,171, 90,1);
+$rgba-secondary-2-1: rgba(210,184,153,1);
+$rgba-secondary-2-2: rgba(246,201,151,1);
+$rgba-secondary-2-3: rgba(255,159, 51,1);
+$rgba-secondary-2-4: rgba(255,135,  0,1);
+
+$rgba-complement-0: rgba(242,120, 90,1);
+$rgba-complement-1: rgba(210,164,153,1);
+$rgba-complement-2: rgba(246,169,151,1);
+$rgba-complement-3: rgba(255, 90, 51,1);
+$rgba-complement-4: rgba(255, 49,  0,1);
+
+
+
 $header-height: 60px;
 $footer-min-height: 60px;
 $main-max-height: calc(100vh - (60px + 60px));
+$white: #fff;
+$bg-white: #fff;
+$nav-bg: #fff;
 
 $football-bg-top-height: 35vh;
 $football-table-element-size: 3em;

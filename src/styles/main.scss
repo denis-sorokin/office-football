@@ -1,4 +1,6 @@
+@import "~animate.css/animate.min.css";
 @import "constants";
+@import "custom";
 
 body {
 	margin: 0;
@@ -8,8 +10,20 @@ body {
 	height: 100vh;
 }
 
+.el-header {
+	background-color: $color-primary-3;
+	h1 {
+		color: mix(#fff, $color-primary-3, 90%);;
+	}
+}
+
 .el-main {
 	min-height: $main-max-height;
+}
+
+.el-aside {
+	width: 200px;
+	background-color: $white;
 }
 
 .bg-main {
@@ -18,7 +32,7 @@ body {
 	position: absolute;
 	left: 0;
 	right: 0;
-	background-color: #ffffff;
+	background-color: $bg-white;
 	&:before {
 		content: '';
 	}
@@ -58,4 +72,11 @@ body {
 		background-size: cover;
 		background-position: center;
 	}
+}
+
+.toggleSidebar-enter-active {
+	animation: slideInLeft 0.5s linear;
+}
+.toggleSidebar-leave-active {
+	animation: slideOutLeft 0.5s linear;
 }

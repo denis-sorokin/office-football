@@ -19,20 +19,20 @@
 				</div>
 				<div class="content">
 					<nav class="nav justify-content-around p-3">
-						<v-button v-for="(el, index) in tables"
-						:title="el.title"
-						:propfn="el.table"
-						:action="setActiveTable"
-						:key="index"
-						class="nav-item col-lg-5 my-1 btn-success">
-						</v-button>
+						<!--<v-button v-for="(el, index) in tables"-->
+						<!--:title="el.title"-->
+						<!--:propfn="el.table"-->
+						<!--:action="setActiveTable"-->
+						<!--:key="index"-->
+						<!--class="nav-item col-lg-5 my-1 btn-success">-->
+						<!--</v-button>-->
 					</nav>
 				</div>
-				<WantGame v-if="activeTable === 'wantGame'"/>
-				<WantReferee v-else-if="activeTable === 'wantReferee'"/>
-				<RefuseGame v-else-if="activeTable === 'cancelApplication'"/>
-				<PlayersList v-else-if="activeTable === 'playersList'"/>
-				<GamesList v-else-if="activeTable === 'gamesList'"/>
+				<!--<WantGame v-if="activeTable === 'wantGame'"/>-->
+				<!--<WantReferee v-else-if="activeTable === 'wantReferee'"/>-->
+				<!--<RefuseGame v-else-if="activeTable === 'cancelApplication'"/>-->
+				<!--<PlayersList v-else-if="activeTable === 'playersList'"/>-->
+				<!--<GamesList v-else-if="activeTable === 'gamesList'"/>-->
 				<!--<img class="football__ball point" :class="displaySecret? 'secretBall-animate':''"-->
 				<!--src="@/assets/football_ball.png" @click="showSecret"/>-->
 			</div>
@@ -40,16 +40,8 @@
 	</div>
 </template>
 <script>
-import { mapGetters } from 'vuex';
-import WantGame from '@/components/FootballWantGame';
-import WantReferee from '@/components/FootballWantReferee';
-import RefuseGame from '@/components/FootballRefuseGame';
-import PlayersList from '@/components/FootballPlayersList';
-import GamesList from '@/components/FootballGamesList';
-
 export default {
 	name: 'footballTournament',
-	components: { WantGame, WantReferee, RefuseGame, PlayersList, GamesList },
 	data () {
 		return {
 			displaySecret: false,
@@ -77,14 +69,6 @@ export default {
 			]
 		};
 	},
-	created () {
-		this.$store.dispatch('football/SET_ACTIVE_TABLE', 'gamesList');
-	},
-	computed: {
-		...mapGetters({
-			activeTable: 'football/getActiveTable'
-		})
-	},
 	methods: {
 		showSecret () {
 			this.displaySecret = true;
@@ -92,9 +76,6 @@ export default {
 				this.displaySecret = false;
 			}, 1500);
 			console.log('secret');
-		},
-		setActiveTable (table) {
-			this.$store.dispatch('football/SET_ACTIVE_TABLE', table);
 		}
 	}
 };

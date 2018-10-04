@@ -15,11 +15,11 @@
             {{ $t(`football.${checkDate ? 'timeAvailable' : 'timeDeny'}`,
             checkDate ? {time: gameTime} : null) }}
         </span>
-		<v-button
-		:title="$t('buttons.football.writeTime')"
-		:disabled="!checkDate"
-		:action="writeTime" class="my-5" :class="!checkDate? 'btn-secondary':'btn-success'">
-		</v-button>
+		<!--<v-button-->
+		<!--:title="$t('buttons.football.writeTime')"-->
+		<!--:disabled="!checkDate"-->
+		<!--:action="writeTime" class="my-5" :class="!checkDate? 'btn-secondary':'btn-success'">-->
+		<!--</v-button>-->
 	</div>
 </template>
 <script>

@@ -18,9 +18,9 @@
                         type: 'password', validFeedback: 'chars and numbers and _.-+', required: true }"
                         @change="updatePassword"></v-input>
 					</div>
-					<button class="btn btn-primary btn-lg mt-5" :disabled="!validateInputs" @click="signUp">{{
-						$t('auth.signUp') }}
-					</button>
+					<!--<button class="btn btn-primary btn-lg mt-5" :disabled="!validateInputs" @click="signUp">{{-->
+						<!--$t('auth.signUp') }}-->
+					<!--</button>-->
 				</div>
 			</div>
 		</div>
