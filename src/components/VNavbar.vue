@@ -6,7 +6,7 @@
 		@close="handleClose">
 		<el-menu-item v-for="(el, index) in defaultRoutes()" :index="index.toString()" :key="index">
 			<i class="el-icon-caret-right"></i>
-			<span>{{ $t(`nav.${el.name}`) }}</span>
+			<span @click="$router.push(el.redirectTo)">{{ $t(`nav.${el.name}`) }}</span>
 		</el-menu-item>
 	</el-menu>
 </template>

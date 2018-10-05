@@ -2,10 +2,10 @@
 	<div id="app" @click="hideSidebar">
 		<el-container class="football">
 			<el-header>
-				<el-col :span="5" class="h-100 vertical-center">
+				<el-col :span="5" class="h-100 d-flex vertical-center">
 					<el-button id="menu-button" plain icon="el-icon-menu"></el-button>
 				</el-col>
-				<el-col :span="19" class="h-100 text-right">
+				<el-col :span="19" class="h-100 text-right vertical-center d-flex flex__end">
 					<h1>{{ $t('main.footballTitle') }}</h1>
 				</el-col>
 			</el-header>
@@ -17,9 +17,9 @@
 				</transition>
 				<el-container>
 					<el-main>
-						<transition name="routerAnimate">
+						<!--<transition name="routerAnimate">-->
 							<router-view/>
-						</transition>
+						<!--</transition>-->
 					</el-main>
 					<el-footer>
 						<el-col :span="24" class="h-100 vertical-center justify-center">Footer</el-col>

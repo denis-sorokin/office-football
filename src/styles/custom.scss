@@ -3,11 +3,21 @@
 }
 
 .vertical-center {
-	display: flex;
 	vertical-align: middle;
 	align-items: center;
 	align-content: center;
 	justify-items: center;
+}
+
+.d-flex {
+	display: flex;
+}
+
+.flex {
+	&__start {}
+	&__end {
+		justify-content: flex-end;
+	}
 }
 
 .text-right {
@@ -20,4 +30,13 @@
 
 .justify-center {
 	justify-content: center;
+}
+
+.mt {
+	&__3 {
+		margin-top: 3em;
+	}
+	&__15px {
+		margin-top: 15px;
+	}
 }

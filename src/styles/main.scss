@@ -1,9 +1,11 @@
 @import "~animate.css/animate.min.css";
 @import "constants";
+@import "login";
 @import "custom";
 
 body {
 	margin: 0;
+	font-size: 1.4em;
 }
 
 #app {
@@ -13,11 +15,14 @@ body {
 .el-header {
 	background-color: $color-primary-3;
 	h1 {
+		margin: 0;
 		color: mix(#fff, $color-primary-3, 90%);;
 	}
 }
 
 .el-main {
+	display: flex !important;
+	align-items: center;
 	min-height: $main-max-height;
 }
 

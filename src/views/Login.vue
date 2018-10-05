@@ -1,19 +1,53 @@
 <template>
+	<!--<div class="login">-->
+		<!--<h1 class="text-center">{{ $t('main.welcome') }}</h1>-->
+			<!--<div class="sub-title mt__3">{{ $t('auth.email') }}</div>-->
+			<!--<el-input-->
+				<!--class="mt__15px"-->
+				<!--placeholder="Please input"-->
+				<!--v-model="email"-->
+				<!--clearable>-->
+			<!--</el-input>-->
+
+			<!--<div class="sub-title mt__3">{{ $t('auth.password') }}</div>-->
+			<!--<el-input-->
+				<!--class="mt__15px"-->
+				<!--placeholder="Please input"-->
+				<!--v-model="password"-->
+				<!--clearable>-->
+			<!--</el-input>-->
+	<!--</div>-->
+
 	<div class="login">
-		<h2>{{ $t('main.welcome') }}</h2>
-		<div class="wp-300">
-			<div class="form-group">
-				<div class="input-group d-flex flex-column">
-					<label class="control-label" for="email">{{ $t('auth.email') }}</label><i class="bar"></i>
-					<input type="text" id="email" v-model="email" required="required" class="border-25"/>
-				</div>
-				<div class="input-group d-flex flex-column mt-3">
-					<label class="control-label" for="password">{{ $t('auth.password') }}</label><i class="bar"></i>
-					<input type="password" id="password" v-model="password" required="required" class="border-25"/>
-				</div>
-			</div>
-			<!--<button class="btn btn-primary btn-lg" @click="auth">{{ $t('auth.login') }}</button>-->
-		</div>
+		<el-row>
+			<el-col :span="12" :offset="6">
+				<el-card :body-style="{ padding: '0px' }" shadow="always">
+					<div slot="header" class="clearfix text-center">
+						<span>{{ $t('main.welcome') }}</span>
+					</div>
+					<div style="padding: 14px;">
+						<div class="sub-title mt__3">{{ $t('auth.email') }}</div>
+						<el-input
+							class="mt__15px"
+							:placeholder="$t('auth.email')"
+							v-model="email"
+							clearable>
+						</el-input>
+
+						<div class="sub-title mt__3">{{ $t('auth.password') }}</div>
+						<el-input
+							class="mt__15px"
+							:placeholder="$t('auth.password')"
+							v-model="password"
+							clearable>
+						</el-input>
+						<div class="bottom center clearfix mt__3">
+							<el-button type="primary" plain round @click="auth">{{ $t('auth.login') }}</el-button>
+						</div>
+					</div>
+				</el-card>
+			</el-col>
+		</el-row>
 	</div>
 </template>
 
