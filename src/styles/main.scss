@@ -31,7 +31,7 @@ body {
 }
 
 .bg-main {
-	height: 100%;
+	height: calc(100% - 60px);
 	z-index: -1;
 	position: absolute;
 	left: 0;
@@ -60,7 +60,7 @@ body {
 		height: 35vh;
 		background: url('./assets/football_bg_top.jpg');
 		background-repeat: no-repeat;
-		background-size: auto;
+		background-size: cover;
 		background-position: center -130px;
 	}
 
